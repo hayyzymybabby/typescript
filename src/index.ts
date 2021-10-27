@@ -1,6 +1,7 @@
 import express from 'express'
 import cookieSession from 'cookie-session'
 import './controller/LoginController'
+import './controller/CrowllerController'
 import { router } from './controller/decorator'
 
 const app = express()
