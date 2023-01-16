@@ -6,7 +6,7 @@
   "scripts": {
     "dev:build": "npx tsc -w",
     "dev:start": "nodemon node ./build/crowller/index.js",
-    "dev": "concurrently yarn dev:build & yarn dev:start",
+    "dev": "concurrently yarn:dev:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "nodemonConfig": {
