@@ -2,6 +2,12 @@ import { Router, Request, Response } from 'express'
 import Crowller from './crowller'
 import DellAnalyzer from './dellAnalyzer'
 
+interface RequestWithBody extends Request {
+  body: {
+    [key: string]: string | undefined
+  }
+}
+
 const router = Router()
 
 router.get('/', (req: Request, res: Response) => {
@@ -17,7 +23,7 @@ router.get('/', (req: Request, res: Response) => {
   `)
 })
 
-router.post('/getData', (req: Request, res: Response) => {
+router.post('/getData', (req: RequestWithBody, res: Response) => {
   const { password } = req.body
   if (password === '123') {
     const secret = 'x3b174jsx'
@@ -26,7 +32,7 @@ router.post('/getData', (req: Request, res: Response) => {
     new Crowller(url, analyzer)
     res.send('success')
   } else {
-    res.send('password error')
+    res.send(`${req.teacherName} password error`)
   }
 })
 
