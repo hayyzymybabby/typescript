@@ -1,5 +1,5 @@
 interface Result {
-  success: boolean
+  sucesss: boolean
   errMsg?: string
   data: any
 }
@@ -7,13 +7,13 @@ interface Result {
 export const getResponseData = (data: any, errMsg?: string): Result => {
   if (errMsg) {
     return {
-      success: false,
+      sucesss: false,
       errMsg,
       data
     }
   }
   return {
-    success: true,
+    sucesss: true,
     data
   }
 }
