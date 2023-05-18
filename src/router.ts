@@ -20,21 +20,6 @@
 
 // const router = Router();
 
-// router.post('/login', (req: BodyRequest, res: Response) => {
-//   const { password } = req.body;
-//   const isLogin = req.session ? req.session.login : false;
-//   if (isLogin) {
-//     res.json(getResponseData(false, '已经登陆过'));
-//   } else {
-//     if (password === '123' && req.session) {
-//       req.session.login = true;
-//       res.json(getResponseData(true));
-//     } else {
-//       res.json(getResponseData(false, '登陆失败'));
-//     }
-//   }
-// });
-
 // router.get('/getData', checkLogin, (req: BodyRequest, res: Response) => {
 //   const secret = 'secretKey';
 //   const url = `http://www.dell-lee.com/typescript/demo.html?secret=${secret}`;
